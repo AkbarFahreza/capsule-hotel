@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
+import Button from "./ui/button";
 
 const navLinks = [
   {
@@ -30,7 +31,7 @@ export default function NavBar() {
           alt="Caspel hotel logo"
           className="lg:w-14 lg:h-14 w-10 h-10"
         />
-        <p className="text-4xl lg:text-5xl font-logo">Caspel</p>
+        <p className="text-4xl text-white lg:text-5xl font-logo">Caspel</p>
       </div>
       <ul className="hidden lg:flex absolute top-1/2 left-1/2 -translate-1/2 flex-row gap-4 bg-white py-2.5 px-5 rounded-[10px]">
         {navLinks.map((navLink, index) => (
@@ -45,7 +46,7 @@ export default function NavBar() {
       </ul>
       <button
         onClick={menuClick}
-        className="cursor-pointer block lg:hidden bg-main p-2 z-50"
+        className="cursor-pointer block lg:hidden bg-main p-2 z-50 text-white"
       >
         <AnimatePresence mode="wait">
           {isMobileNavActive ? (
@@ -70,12 +71,15 @@ export default function NavBar() {
       <AnimatePresence>
         {isMobileNavActive ? <MobileNavBar /> : null}
       </AnimatePresence>
-      <button
+
+      <Button
+        name="Login Button"
         onClick={() => alert("doesnt do anything")}
-        className="hidden lg:block bg-main py-2.5 px-7 rounded-[10px] transition-all duration-150 hover:brightness-75 cursor-pointer"
+        variants="Primary"
+        className="hidden lg:block"
       >
         Login
-      </button>
+      </Button>
     </div>
   );
 }

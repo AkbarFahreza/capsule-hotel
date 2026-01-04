@@ -89,7 +89,7 @@ export default function DummyData() {
     },
   ];
 
-  return { HotelData };
+  return HotelData;
 }
 
 //   const LocationDatas = [

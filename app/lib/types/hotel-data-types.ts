@@ -2,7 +2,7 @@ export type HotelDataTypes = [
   id: number,
   hotel_name: string,
   city: string,
-  rooms: Array<[]>
+  rooms: RoomDataTypes[]
 ];
 export type RoomDataTypes = [
   room_id: number,

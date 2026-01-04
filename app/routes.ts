@@ -5,4 +5,7 @@ import {
   route,
 } from "@react-router/dev/routes";
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+export default [
+  index("routes/home.tsx"),
+  route("/:hotel_name", "routes/pages/hotel-details.tsx"),
+] satisfies RouteConfig;

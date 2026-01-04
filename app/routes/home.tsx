@@ -17,6 +17,9 @@ export default function Home() {
         <span id="hero-image" />
         <QuickBooking />
       </div>
+      <a href="/apa-iya-neng" className="z-50">
+        Link
+      </a>
     </>
   );
 }
