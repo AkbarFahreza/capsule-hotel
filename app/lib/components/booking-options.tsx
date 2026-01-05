@@ -28,8 +28,11 @@ export default function BookingOptions() {
         <label className="text-sm mb-1">Location</label>
         <MapPin size={18} className="booking-options-icon" />
         <select name="Location" id="location" className="py-2 booking-options">
-          {hotelDatas.map((hotelData) => (
-            <option value={hotelData.hotel_name + ", " + hotelData.city}>
+          {hotelDatas.map((hotelData, index) => (
+            <option
+              key={index}
+              value={hotelData.hotel_name + ", " + hotelData.city}
+            >
               {hotelData.hotel_name + ", " + hotelData.city}
             </option>
           ))}
