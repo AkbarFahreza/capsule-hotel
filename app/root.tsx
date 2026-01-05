@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import NavBar from "./lib/components/navbar";
+import { Figma, Github } from "lucide-react";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -33,12 +34,41 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="w-full max-w-495  min-h-screen">
+      <body className="w-full max-w-495 min-h-screen">
         <NavBar />
         {children}
         <ScrollRestoration />
         <Scripts />
       </body>
+      <footer className=" bg-main text-white mt-20 py-5 lg:py-10">
+        <div className="container">
+          <div>
+            <a
+              href="https://github.com/AkbarFahreza/capsule-hotel"
+              className="text-xl lg:text-2xl font-bold"
+            >
+              Casple
+            </a>
+            <p>This is my demo project for my job hehe</p>
+          </div>
+          <div className="mt-10 flex flex-col gap-2">
+            <a
+              href="https://www.figma.com/design/1umsFBwuUsdJTZ58akdsNf/Untitled?node-id=1-3&t=ICdL85ixVovgoU2P-1"
+              className="text-xs lg:text-md flex flex-row gap-2"
+            >
+              <Figma size={16} />
+              This web design (figma)
+            </a>
+            <a
+              href="https://www.figma.com/design/1umsFBwuUsdJTZ58akdsNf/Untitled?node-id=1-3&t=ICdL85ixVovgoU2P-1"
+              className="text-xs lg:text-md flex flex-row gap-2"
+            >
+              <Github size={16} />
+              This web repository
+            </a>
+          </div>
+        </div>
+      </footer>
     </html>
   );
 }

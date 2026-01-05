@@ -10,11 +10,11 @@ const navLinks = [
   },
   {
     name: "Explore",
-    href: "/explore",
+    href: "#",
   },
   {
     name: "Customer Service",
-    href: "/customer-service",
+    href: "#",
   },
 ];
 export default function NavBar() {
