@@ -90,7 +90,7 @@ export default function RoomDetail() {
                   </p>
                 </div>
                 <p className="flex flex-row items-end mb-3">
-                  IDR{" "}
+                  Total : IDR{" "}
                   <span className="ml-2 font-bold text-xl lgtext-2xl text-main">
                     {Number(item.room_price_per_night) * Number(stayDur)}
                   </span>
