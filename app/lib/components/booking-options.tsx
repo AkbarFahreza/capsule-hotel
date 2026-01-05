@@ -84,7 +84,7 @@ export default function BookingOptions() {
       </div>
       <Button
         name="Search availablity"
-        onClick={() => console.log("I search Something")}
+        onClick={() => {}}
         variants="Primary"
         className="lg:w-2/12 h-full mt-4"
       >

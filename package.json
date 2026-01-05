@@ -2,6 +2,7 @@
   "name": "capsule-hotel",
   "private": true,
   "type": "module",
+  "author": "Akbar fahreza",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
